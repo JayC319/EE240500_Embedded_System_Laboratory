@@ -1,0 +1,40 @@
+#main.cpp
+
+    To launch the main program to control the led flashing sequence.
+
+#ledDemo.cpp
+
+    There exists 2 functions that are designated to control the flashes per loop
+
+
+
+```bash
+    void Led(DigitalOut &ledpin)
+{
+   for(int i = 0; i < 4; ++i)
+    {
+        ledpin = !ledpin;
+        ThisThread::sleep_for(500ms);
+    }
+
+    ledpin = 0;
+}
+```
+flashes Led twice, then turn into low mode
+
+
+```bash
+    void Led2(DigitalOut &ledpin)
+{
+   for(int i = 0; i < 6; ++i)
+    {
+        ledpin = !ledpin;
+        ThisThread::sleep_for(500ms);
+    }
+    ledpin = 0;
+}
+```
+flashes 3 times, then turn into low mode
+
+
+    
